@@ -1,0 +1,220 @@
+alter table servicio
+add
+
+	[ServicioTarifaPlana] [decimal](12, 0) NULL,
+
+	[ServicioTarifaInsumos_Extras] [decimal](12, 0) NULL
+
+alter table RequiereServicio
+add
+[RequiereServicioOtros] [bit] NULL
+
+
+CREATE TABLE [dbo].[RequiereServicioDetalle](
+	[RequiereServicioId] [varchar](200) NOT NULL,
+	[ServicioId] [decimal](12, 0) NOT NULL,
+	[ServicioDetalleId] [decimal](12, 0) NOT NULL,
+	[ServicioDetalleCantidad] [int] NULL,
+	[ServicioDetallePUFecha] [int] NULL,
+	[ServicioDetalleDatos] [nvarchar](max) NULL,
+ CONSTRAINT [PK_RequiereServicioDetalle] PRIMARY KEY CLUSTERED 
+(
+	[RequiereServicioId] ASC,
+	[ServicioId] ASC,
+	[ServicioDetalleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[RequiereServicioDetalle]  WITH CHECK ADD  CONSTRAINT [FK_RequiereServicioDetalle_RequiereServicio] FOREIGN KEY([RequiereServicioId])
+REFERENCES [dbo].[RequiereServicio] ([RequiereServicioId])
+GO
+ALTER TABLE [dbo].[RequiereServicioDetalle] CHECK CONSTRAINT [FK_RequiereServicioDetalle_RequiereServicio]
+GO
+-----------------
+	
+CREATE TABLE [dbo].[ServicioDetalle](
+	[ServicioId] [decimal](12, 0) NOT NULL,
+	[ServicioDetalleId] [decimal](12, 0) NOT NULL,
+	[ServicioDetalleDescripcion] [varchar](100) NULL,
+	[ServicioDetallePrecioUnitario] [int] NULL,
+	[ServicioDetalleCostoInicial] [int] NULL,
+	[ServicioDetalleCostoFinal] [int] NULL,
+ CONSTRAINT [PK_ServicioDetalle] PRIMARY KEY CLUSTERED 
+(
+	[ServicioId] ASC,
+	[ServicioDetalleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+-------------------------------
+alter table Equivalencia
+add
+
+	[EquivalenciaObjetoId2] [varchar](200) NULL
+
+	
+-------------------------------
+alter table ServAsig
+add
+
+	[ServAsigCalificado] [bit] NULL
+
+----------------------------------
+--PROCEDIMIENTOS
+
+create  function [dbo].[ObtenerProveedoresHabilitados](@servicioId decimal(12,0))
+returns decimal(12,0)
+as
+begin
+
+
+return (select count(ServicioPersonaId) nroProveedores from ServicioPersona where EstadoServicioId=1 and StatusServicioId=1 and ServicioId=@servicioId)
+ 
+end
+
+
+USE [serviceweb_Dev]
+GO
+/****** Object:  StoredProcedure [dbo].[PaqBusquedaServicio_v2]    Script Date: 7/7/2020 20:59:37 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+------------
+ALTER FUNCTION [dbo].[ServicioSP](@IdiomaSigla varchar(10))
+RETURNS TABLE
+ AS
+ RETURN
+ SELECT s.servicioId,e.EquivalenciaValor as ServicioNombre,s.servicioURLFoto,s.CategoriaServicioId,s.ServicioUsuario,s.ServicioFechaHoraMod,
+ s.ServicioKeyWords,s.ServicioPorcentaje,s.ServicioTarifaMinima,s.ServicioDetalleTipo,s.ServicioSabado,s.ServicioDomingo,s.ServicioHorarioRegularIni,
+ s.ServicioHorarioRegularFin,s.ServicioHorarioSabadoIni,s.ServicioHorarioSabadoFin,s.ServicioHorarioDomingoIni,s.ServicioHorarioDomingoFin,
+ s.ServicioPersonaEnTurno,s.ServicioDetalleFormulario,s.TipoServicioId,s.ServicioTarifaPlana,s.ServicioTarifaInsumos_Extras,dbo.ObtenerProveedoresHabilitados(s.servicioId) as  nroProveedores
+FROM[dbo].[Equivalencia] e with(nolock)
+inner join Idioma i with(nolock)
+on
+e.IdiomaId=i.idiomaId
+inner join Objeto o with(nolock)
+on 
+e.ObjetoId=o.ObjetoId
+INNER JOIN [dbo].[Servicio] s with(nolock)
+ON e.EquivalenciaObjetoId=s.servicioId
+and ObjetoNombre='Servicio'
+and IdiomaSigla=@IdiomaSigla
+
+
+
+------------
+ALTER  procedure [dbo].[PaqBusquedaServicio_v2] (@ServicioKeyWords varchar(250), @lang varchar(10),@CiudadId decimal(12,2), @CategoriaServicioId decimal(12,2))
+as
+--declare
+--@ServicioKeyWords varchar(250)='%', @lang varchar(10) = 'es',@CiudadId decimal(12,2)=2, @CategoriaServicioId decimal(12,2)=0
+
+
+if ((@CategoriaServicioId = 0 )and(LEN(@ServicioKeyWords)=1))
+BEGIN
+		select @CategoriaServicioId = cse.CategoriaServicioId 
+	from dbo.CategoriaServicio cse with(nolock) where cse.CiudadId = @CiudadId and cse.CategoriaServicioHijoId is null
+	
+	select null servicioId,null ServicioNombre, null servicioURLFoto, null CategoriaServicioId, null ServicioUsuario, null ServicioFechaHoraMod,null ServicioKeyWords,
+	null ServicioPorcentaje,null ServicioTarifaMinima,null servicioDetalleTipo,null servicioSabado,null servicioDomingo,null servicioHorarioRegularIni,
+	null servicioHorarioRegularFin,null servicioHorarioSabadoIni,null servicioHorarioSabadoFin,null servicioHorarioDomingoIni,null servicioHorarioDomingoFin,
+	null servicioPersonaEnTurno,null servicioDetalleFormulario,null TipoServicioId,null ServicioTarifaPlana, null ServicioTarifaInsumos_Extras,null nroProveedores
+	,cs.CategoriaServicioId,cs.CategoriaServicioNombre,cs.CategoriaServicioURLFoto,cs.CiudadId,cs.CategoriaServicioDescripcion
+	,cs.CategoriaServicioUsuario,cs.CategoriaServicioFechaHoraMod,cs.CategoriaServicioHijoId,cs.CategoriaServicioDestLast
+	, null ServicioRequerimientoId,null ServicioRequerimientoDesc
+     from CategoriaServicioSP(@lang) cs  
+      where cs.CategoriaServicioHijoId=@CategoriaServicioId
+
+	 union
+	 --------------------------------
+	 	 select s.servicioId,s.ServicioNombre,s.servicioURLFoto,s.CategoriaServicioId,s.ServicioUsuario,s.ServicioFechaHoraMod,s.ServicioKeyWords,
+	 s.ServicioPorcentaje,s.ServicioTarifaMinima,s.servicioDetalleTipo,s.servicioSabado,s.servicioDomingo,s.servicioHorarioRegularIni,
+	s.servicioHorarioRegularFin,s.servicioHorarioSabadoIni,s.servicioHorarioSabadoFin,s.servicioHorarioDomingoIni,s.servicioHorarioDomingoFin,
+	s.servicioPersonaEnTurno,s.servicioDetalleFormulario,s.TipoServicioId,s.ServicioTarifaPlana,s.ServicioTarifaInsumos_Extras,dbo.ObtenerProveedoresHabilitados(s.servicioId) as nroProveedores,
+	 cs.CategoriaServicioId,' ' as CategoriaServicioNombre,cs.CategoriaServicioURLFoto,cs.CiudadId,cs.CategoriaServicioDescripcion,
+	 cs.CategoriaServicioUsuario, cs.CategoriaServicioFechaHoraMod,cs.CategoriaServicioHijoId, cs.CategoriaServicioDestLast,
+	 seq.ServicioRequerimientoId,seq.ServicioRequerimientoDesc 
+	 from ServicioSP(@lang)s
+	 left join CategoriaServicioSP(@lang)cs
+	  on s.categoriaServicioid=cs.CategoriaServicioId
+   left join ServicioRequerimientoSP(@lang)  seq 
+   on  s.servicioId = seq.servicioId	
+	 where cs.CategoriaServicioId=@CategoriaServicioId
+	 ------------------------------------
+END
+ELSE
+BEGIN
+if((@CategoriaServicioId> 0 )and(LEN(@ServicioKeyWords)=1))
+--INICIO
+BEGIN
+
+    -- if ((select COUNT(CategoriaServicioId)cantidad from CategoriaServicioSP('es') where CategoriaServicioHijoId in (select CategoriaServicioId from CategoriaServicioSP('es') where CategoriaServicioId=2))>0 )
+  --   BEGIN
+     select  NULL AS servicioId, NULL ServicioNombre,NULL servicioURLFoto, NULL CategoriaServicioId,NULL ServicioUsuario, NULL ServicioFechaHoraMod,NULL ServicioKeyWords,
+	 null ServicioPorcentaje,null ServicioTarifaMinima,null servicioDetalleTipo,null servicioSabado,null servicioDomingo,null servicioHorarioRegularIni,
+	null servicioHorarioRegularFin,null servicioHorarioSabadoIni,null servicioHorarioSabadoFin,null servicioHorarioDomingoIni,null servicioHorarioDomingoFin,
+	null servicioPersonaEnTurno,null servicioDetalleFormulario,null TipoServicioId,null ServicioTarifaPlana,null ServicioTarifaInsumos_Extras,null nroProveedores,
+	 
+	 c1.CategoriaServicioId,
+    c1.CategoriaServicioNombre,c1.CategoriaServicioURLFoto,c1.CiudadId,c1.CategoriaServicioDescripcion,c1.CategoriaServicioUsuario,c1.CategoriaServicioFechaHoraMod,c1.CategoriaServicioHijoId,c1.CategoriaServicioDestLast 
+	, null ServicioRequerimientoId, null ServicioRequerimientoDesc
+	
+	from (select * from CategoriaServicioSP(@lang)where CategoriaServicioHijoId in (select CategoriaServicioId from CategoriaServicioSP(@lang) where CategoriaServicioId=@CategoriaServicioId and CiudadId=@CiudadId))c1
+	union all
+    -- END
+     -- ELSE
+     --BEGIN
+	 select  s.servicioId,s.ServicioNombre,s.servicioURLFoto,s.CategoriaServicioId,s.ServicioUsuario,s.ServicioFechaHoraMod,s.ServicioKeyWords,
+	 s.ServicioPorcentaje,s.ServicioTarifaMinima,s.servicioDetalleTipo,s.servicioSabado,s.servicioDomingo,s.servicioHorarioRegularIni,
+	s.servicioHorarioRegularFin,s.servicioHorarioSabadoIni,s.servicioHorarioSabadoFin,s.servicioHorarioDomingoIni,s.servicioHorarioDomingoFin,
+	s.servicioPersonaEnTurno,s.servicioDetalleFormulario,s.TipoServicioId,s.ServicioTarifaPlana,s.ServicioTarifaInsumos_Extras,dbo.ObtenerProveedoresHabilitados(s.servicioId) as nroProveedores,
+	NULL CategoriaServicioId , 
+	 NULL  CategoriaServicioNombre, NULL CategoriaServicioURLFoto,cs.CiudadId,cs.CategoriaServicioDescripcion,cs.CategoriaServicioUsuario,cs.CategoriaServicioFechaHoraMod,cs.CategoriaServicioHijoId,cs.CategoriaServicioDestLast
+	 , seq.ServicioRequerimientoId, seq.ServicioRequerimientoDesc
+	 from CategoriaServicioSP(@lang) cs
+     left join ServicioSP(@lang) s
+      on cs.CategoriaServicioId=s.CategoriaServicioId
+	   left join ServicioRequerimientoSP(@lang)  seq on  s.servicioId = seq.servicioId
+     where cs.CategoriaServicioId=@CategoriaServicioId
+	   and cs.CiudadId=@CiudadId
+    -- END
+END
+ELSE
+BEGIN
+if(LEN(@ServicioKeyWords)>1)
+    begin
+    -- set @CategoriaServicioId =( select cse.CategoriaServicioId from dbo.CategoriaServicio cse with(nolock) where cse.CiudadId = @CiudadId and cse.CategoriaServicioId=@CategoriaServicioId) 
+     select s.servicioId,s.ServicioNombre,s.servicioURLFoto,s.CategoriaServicioId,s.ServicioUsuario,s.ServicioFechaHoraMod,s.ServicioKeyWords,s.TipoServicioId,s.ServicioTarifaPlana,s.ServicioTarifaInsumos_Extras,dbo.ObtenerProveedoresHabilitados(s.servicioId) as nroProveedores,
+	 NULL CategoriaServicioId , 
+	 NULL  CategoriaServicioNombre, NULL CategoriaServicioURLFoto,
+	 csl.CiudadId,csl.CategoriaServicioDescripcion,csl.CategoriaServicioUsuario,csl.CategoriaServicioFechaHoraMod,csl.CategoriaServicioHijoId,csl.CategoriaServicioDestLast	 
+	 , seq.ServicioRequerimientoId, seq.ServicioRequerimientoDesc
+	 from [dbo].[ServicioSP](@lang) s
+    inner  join  [CategoriaServicioSP](@lang) csl 
+      on s.CategoriaServicioId=csl.CategoriaServicioId
+	  left join ServicioRequerimientoSP(@lang)  seq 
+	  on  s.servicioId = seq.servicioId
+     where s.ServicioKeyWords like '%'+@ServicioKeyWords+'%'
+     and CSL.CiudadId=@CiudadId
+    end
+END
+
+END
+---------------------------------
+create  FUNCTION [dbo].[ServicioDetalleSP](@IdiomaSigla varchar(10))
+RETURNS TABLE
+ AS
+ RETURN
+ SELECT sd.ServicioId,sd.ServicioDetalleId,e.EquivalenciaValor as ServicioDetalleDescripcion,sd.ServicioDetallePrecioUnitario,
+sd.ServicioDetalleCostoInicial,sd.ServicioDetalleCostoFinal
+FROM[dbo].[Equivalencia] e with(nolock)
+inner join Idioma i with(nolock)
+on
+e.IdiomaId=i.idiomaId
+inner join Objeto o with(nolock)
+on 
+e.ObjetoId=o.ObjetoId
+INNER JOIN ServicioDetalle sd with(nolock)
+ON e.EquivalenciaObjetoId=sd.ServicioDetalleId
+and e.EquivalenciaObjetoId2=sd.ServicioId
+and o.ObjetoNombre='ServicioDetalle'
+and i.IdiomaSigla=@IdiomaSigla

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PersonaDireccion">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+            <PropertyRef Name="PersonaDireccionId" />
+          </Key>
+          <Property Name="PersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="TipoDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionTitulo" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PersonaDireccionGeo" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="PersonaDireccionDescripcion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CiudadDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionFHMod" Type="datetime" Nullable="false" />
+          <Property Name="PersonaDireccionUsuarioMod" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="EstadoDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionDireccion" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+          <EntitySet Name="PersonaDireccion" EntityType="Self.PersonaDireccion" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PersonaDireccion">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+            <PropertyRef Name="PersonaDireccionId" />
+          </Key>
+          <Property Name="PersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="TipoDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionTitulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaDireccionGeo" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PersonaDireccionDescripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CiudadDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionFHMod" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PersonaDireccionUsuarioMod" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EstadoDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionDireccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PersonasDireccionConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonaDireccion" EntityType="Self.PersonaDireccion" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="PersonasDireccionConnection">
+          <EntitySetMapping Name="PersonaDireccion">
+            <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.PersonaDireccion">
+              <MappingFragment StoreEntitySet="PersonaDireccion">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="PersonaDireccionId" ColumnName="PersonaDireccionId" />
+                <ScalarProperty Name="TipoDireccionId" ColumnName="TipoDireccionId" />
+                <ScalarProperty Name="PersonaDireccionTitulo" ColumnName="PersonaDireccionTitulo" />
+                <ScalarProperty Name="PersonaDireccionGeo" ColumnName="PersonaDireccionGeo" />
+                <ScalarProperty Name="PersonaDireccionDescripcion" ColumnName="PersonaDireccionDescripcion" />
+                <ScalarProperty Name="CiudadDireccionId" ColumnName="CiudadDireccionId" />
+                <ScalarProperty Name="PersonaDireccionFHMod" ColumnName="PersonaDireccionFHMod" />
+                <ScalarProperty Name="PersonaDireccionUsuarioMod" ColumnName="PersonaDireccionUsuarioMod" />
+                <ScalarProperty Name="EstadoDireccionId" ColumnName="EstadoDireccionId" />
+                <ScalarProperty Name="PersonaDireccionDireccion" ColumnName="PersonaDireccionDireccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="decimal" Precision="12" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonaTokenId" Type="varchar" MaxLength="2000" Nullable="false" />
+          <Property Name="PersonaNombres" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PersonaApellidos" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PersonaCorreo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PersonaFechaNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="PersonaTelefono" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="PersonaUID" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="PersonaURLFoto" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PersonaUsuario" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="PersonaFechaHoraMod" Type="datetime" Nullable="false" />
+          <Property Name="TipoPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="GeneroId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="TipoLoginId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="CiudadId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaFechaRegistro" Type="datetime" Nullable="false" />
+          <Property Name="EstadoPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDNI" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="TipoDocumentoId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaGeoReal" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="PersonaClave" Type="varchar" MaxLength="40" />
+          <Property Name="PersonaUsuarioMod" Type="varchar" MaxLength="40" />
+          <Property Name="PersonaCodigoTelefono" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="PersonaGeoLocalizacionLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+          <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonaTokenId" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaNombres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaApellidos" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaCorreo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaFechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PersonaTelefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaUID" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaURLFoto" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaUsuario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaFechaHoraMod" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TipoPersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="GeneroId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="TipoLoginId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="CiudadId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaFechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EstadoPersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDireccionLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaDNI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TipoDocumentoId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PersonaGeoReal" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PersonaClave" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="PersonaUsuarioMod" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="PersonaCodigoTelefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PersonaGeoLocalizacionLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Connection_ServiceWeb_DESARROLLO" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Persona" EntityType="Self.Persona" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="Connection_ServiceWeb_DESARROLLO">
+          <EntitySetMapping Name="Persona">
+            <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.Persona">
+              <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="PersonaTokenId" ColumnName="PersonaTokenId" />
+                <ScalarProperty Name="PersonaNombres" ColumnName="PersonaNombres" />
+                <ScalarProperty Name="PersonaApellidos" ColumnName="PersonaApellidos" />
+                <ScalarProperty Name="PersonaCorreo" ColumnName="PersonaCorreo" />
+                <ScalarProperty Name="PersonaFechaNacimiento" ColumnName="PersonaFechaNacimiento" />
+                <ScalarProperty Name="PersonaTelefono" ColumnName="PersonaTelefono" />
+                <ScalarProperty Name="PersonaUID" ColumnName="PersonaUID" />
+                <ScalarProperty Name="PersonaURLFoto" ColumnName="PersonaURLFoto" />
+                <ScalarProperty Name="PersonaUsuario" ColumnName="PersonaUsuario" />
+                <ScalarProperty Name="PersonaFechaHoraMod" ColumnName="PersonaFechaHoraMod" />
+                <ScalarProperty Name="TipoPersonaId" ColumnName="TipoPersonaId" />
+                <ScalarProperty Name="GeneroId" ColumnName="GeneroId" />
+                <ScalarProperty Name="TipoLoginId" ColumnName="TipoLoginId" />
+                <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+                <ScalarProperty Name="PersonaFechaRegistro" ColumnName="PersonaFechaRegistro" />
+                <ScalarProperty Name="EstadoPersonaId" ColumnName="EstadoPersonaId" />
+                <ScalarProperty Name="PersonaDireccionLast" ColumnName="PersonaDireccionLast" />
+                <ScalarProperty Name="PersonaDNI" ColumnName="PersonaDNI" />
+                <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+                <ScalarProperty Name="PersonaGeoReal" ColumnName="PersonaGeoReal" />
+                <ScalarProperty Name="PersonaClave" ColumnName="PersonaClave" />
+                <ScalarProperty Name="PersonaUsuarioMod" ColumnName="PersonaUsuarioMod" />
+                <ScalarProperty Name="PersonaCodigoTelefono" ColumnName="PersonaCodigoTelefono" />
+                <ScalarProperty Name="PersonaGeoLocalizacionLast" ColumnName="PersonaGeoLocalizacionLast" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

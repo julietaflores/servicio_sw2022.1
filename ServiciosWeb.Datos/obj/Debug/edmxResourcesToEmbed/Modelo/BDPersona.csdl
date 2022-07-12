@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Name="PersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonaTokenId" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaNombres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaApellidos" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaCorreo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaFechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PersonaTelefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaUID" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaURLFoto" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaUsuario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaFechaHoraMod" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TipoPersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="GeneroId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="TipoLoginId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CiudadId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaFechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EstadoPersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDNI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaGeoReal" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PersonaClave" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PersonaUsuarioMod" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PersonaCodigoTelefono" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaGeoLocalizacionLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Connection_ServiceWeb_DESARROLLO" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Persona" EntityType="Self.Persona" />
+  </EntityContainer>
+</Schema>

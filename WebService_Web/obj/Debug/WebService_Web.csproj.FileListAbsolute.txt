@@ -1,0 +1,2 @@
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\WebService_Web\obj\Debug\WebService_Web.csprojAssemblyReference.cache
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\WebService_Web\obj\Debug\WebService_Web.dll.licenses

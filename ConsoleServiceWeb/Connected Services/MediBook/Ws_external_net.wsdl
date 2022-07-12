@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:wsComelecServer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:wsComelecServer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:wsComelecServer">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="WsTransaccion">
+        <xsd:all>
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Lastname" type="xsd:string" />
+          <xsd:element name="Lastnamemother" type="xsd:string" />
+          <xsd:element name="Email" type="xsd:string" />
+          <xsd:element name="Cellphone" type="xsd:string" />
+          <xsd:element name="Ci" type="xsd:string" />
+          <xsd:element name="Expedition" type="xsd:string" />
+          <xsd:element name="Birthday" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespTransaccion">
+        <xsd:all>
+          <xsd:element name="CodError" type="xsd:int" />
+          <xsd:element name="Descripcion" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="WsSpecialties">
+        <xsd:all>
+          <xsd:element name="Cityid" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="RespSpecialties">
+        <xsd:all>
+          <xsd:element name="CodError" type="xsd:int" />
+          <xsd:element name="Descripcion" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="registerPatientRequest">
+    <wsdl:part name="data" type="tns:WsTransaccion" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="registerPatientResponse">
+    <wsdl:part name="return" type="tns:RespTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="getSpecialtiesRequest">
+    <wsdl:part name="data" type="tns:WsSpecialties" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getSpecialtiesResponse">
+    <wsdl:part name="return" type="tns:RespSpecialties" />
+  </wsdl:message>
+  <wsdl:portType name="wsComelecServerPortType">
+    <wsdl:operation name="registerPatient">
+      <documentation>Aqu&amp;iacute; se describe la documentaci&amp;oacute;n y tipos de error posibles</documentation>
+      <wsdl:input message="tns:registerPatientRequest" />
+      <wsdl:output message="tns:registerPatientResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialties">
+      <documentation>Aqu&amp;iacute; se describe la documentaci&amp;oacute;n y tipos de error posibles</documentation>
+      <wsdl:input message="tns:getSpecialtiesRequest" />
+      <wsdl:output message="tns:getSpecialtiesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsComelecServerBinding" type="tns:wsComelecServerPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="registerPatient">
+      <soap:operation soapAction="urn:wsComelecServer#datosTransaccion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsComelecServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsComelecServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecialties">
+      <soap:operation soapAction="urn:wsComelecServer#datosespecialidades" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:wsComelecServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:wsComelecServer" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsComelecServer">
+    <wsdl:port name="wsComelecServerPort" binding="tns:wsComelecServerBinding">
+      <soap:address location="http://190.186.107.116/ws/Ws_external_net?Wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

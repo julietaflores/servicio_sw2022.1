@@ -1,0 +1,12 @@
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\ServiciosWeb.Dominio.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\ServiciosWeb.Dominio.pdb
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\ServiciosWeb.Datos.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\EntityFramework.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\ServiciosWeb.Datos.pdb
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\ServiciosWeb.Datos.dll.config
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\bin\Release\EntityFramework.xml
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\obj\Release\ServiciosWeb.Dominio.csprojAssemblyReference.cache
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\obj\Release\ServiciosWeb.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\obj\Release\ServiciosWeb.Dominio.csproj.CopyComplete
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\obj\Release\ServiciosWeb.Dominio.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\ServiciosWeb.Dominio\obj\Release\ServiciosWeb.Dominio.pdb

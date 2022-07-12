@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModel4StoreContainer" CdmEntityContainer="RequiereSercicioProveedoresConnection">
+    <EntitySetMapping Name="RequiereServicioProveedores">
+      <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel4.RequiereServicioProveedores">
+        <MappingFragment StoreEntitySet="RequiereServicioProveedores">
+          <ScalarProperty Name="RequiereServicioId" ColumnName="RequiereServicioId" />
+          <ScalarProperty Name="RequiereServicioProveedoresId" ColumnName="RequiereServicioProveedoresId" />
+          <ScalarProperty Name="RequiereServicioProveedoresAdj" ColumnName="RequiereServicioProveedoresAdj" />
+          <ScalarProperty Name="RequiereServicioProvCotizacion" ColumnName="RequiereServicioProvCotizacion" />
+          <ScalarProperty Name="RequiereServicioProvFHTrabajo" ColumnName="RequiereServicioProvFHTrabajo" />
+          <ScalarProperty Name="RequiereServicioProvDescipcion" ColumnName="RequiereServicioProvDescipcion" />
+          <ScalarProperty Name="ServicioPersonaId" ColumnName="ServicioPersonaId" />
+          <ScalarProperty Name="RequiereServicioProvFHResp" ColumnName="RequiereServicioProvFHResp" />
+          <ScalarProperty Name="StatusRequiereId" ColumnName="StatusRequiereId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PersonaDireccion">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+      <PropertyRef Name="PersonaDireccionId" />
+    </Key>
+    <Property Name="PersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="TipoDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionTitulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonaDireccionGeo" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PersonaDireccionDescripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CiudadDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionFHMod" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PersonaDireccionUsuarioMod" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EstadoDireccionId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionDireccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="PersonasDireccionConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PersonaDireccion" EntityType="Self.PersonaDireccion" />
+  </EntityContainer>
+</Schema>

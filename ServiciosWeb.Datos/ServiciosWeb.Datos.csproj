@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE3AB895-EA6A-408C-806B-DE4D55F49332}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiciosWeb.Datos</RootNamespace>
+    <AssemblyName>ServiciosWeb.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\BDPersona.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersona.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersona.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersona.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersona.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaDireccion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaDireccion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaDireccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaDireccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaDireccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaDireccion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaGeoLocalizacion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaGeoLocalizacion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaGeoLocalizacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaGeoLocalizacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPersonaGeoLocalizacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPersonaGeoLocalizacion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPostConnection.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPostConnection.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPostConnection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPostConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDPostConnection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDPostConnection.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDRequiereServicioProveedores.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDRequiereServicioProveedores.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDRequiereServicioProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDRequiereServicioProveedores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\BDRequiereServicioProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDRequiereServicioProveedores.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\clasePersona.cs" />
+    <Compile Include="Modelo\clasePersonaDireccionM.cs" />
+    <Compile Include="Modelo\clasePost.cs" />
+    <Compile Include="Modelo\Persona.cs">
+      <DependentUpon>BDPersona.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaDireccion.cs">
+      <DependentUpon>BDPersonaDireccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaGeoLocalizacion.cs">
+      <DependentUpon>BDPersonaGeoLocalizacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Post.cs">
+      <DependentUpon>BDPostConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RequiereServicioProveedores.cs">
+      <DependentUpon>BDRequiereServicioProveedores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Respuesta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Modelo\BDPersonaDireccion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDPersonaDireccion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Modelo\BDPersona.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDPersona.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\BDPersona.edmx.diagram">
+      <DependentUpon>BDPersona.edmx</DependentUpon>
+    </None>
+    <None Include="Modelo\BDPersonaDireccion.edmx.diagram">
+      <DependentUpon>BDPersonaDireccion.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Modelo\BDPersonaGeoLocalizacion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDPersonaGeoLocalizacion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\BDPersonaGeoLocalizacion.edmx.diagram">
+      <DependentUpon>BDPersonaGeoLocalizacion.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Modelo\BDRequiereServicioProveedores.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDRequiereServicioProveedores.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Modelo\BDPostConnection.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDPostConnection.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\BDPostConnection.edmx.diagram">
+      <DependentUpon>BDPostConnection.edmx</DependentUpon>
+    </None>
+    <None Include="Modelo\BDRequiereServicioProveedores.edmx.diagram">
+      <DependentUpon>BDRequiereServicioProveedores.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\BDPersona.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersona.edmx</DependentUpon>
+      <LastGenOutput>BDPersona.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPersona.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersona.edmx</DependentUpon>
+      <LastGenOutput>BDPersona.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPersonaDireccion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersonaDireccion.edmx</DependentUpon>
+      <LastGenOutput>BDPersonaDireccion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPersonaDireccion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersonaDireccion.edmx</DependentUpon>
+      <LastGenOutput>BDPersonaDireccion.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPersonaGeoLocalizacion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersonaGeoLocalizacion.edmx</DependentUpon>
+      <LastGenOutput>BDPersonaGeoLocalizacion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPersonaGeoLocalizacion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPersonaGeoLocalizacion.edmx</DependentUpon>
+      <LastGenOutput>BDPersonaGeoLocalizacion.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPostConnection.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPostConnection.edmx</DependentUpon>
+      <LastGenOutput>BDPostConnection.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDPostConnection.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDPostConnection.edmx</DependentUpon>
+      <LastGenOutput>BDPostConnection.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDRequiereServicioProveedores.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDRequiereServicioProveedores.edmx</DependentUpon>
+      <LastGenOutput>BDRequiereServicioProveedores.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\BDRequiereServicioProveedores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDRequiereServicioProveedores.edmx</DependentUpon>
+      <LastGenOutput>BDRequiereServicioProveedores.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

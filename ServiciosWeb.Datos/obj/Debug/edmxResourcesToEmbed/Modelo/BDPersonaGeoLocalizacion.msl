@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModel1StoreContainer" CdmEntityContainer="PersonaGeolocalizacionConnection">
+    <EntitySetMapping Name="PersonaGeoLocalizacion">
+      <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel1.PersonaGeoLocalizacion">
+        <MappingFragment StoreEntitySet="PersonaGeoLocalizacion">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="PersonaGeoLocalizacionId" ColumnName="PersonaGeoLocalizacionId" />
+          <ScalarProperty Name="PersonaGeoLocalizacionLangLat" ColumnName="PersonaGeoLocalizacionLangLat" />
+          <ScalarProperty Name="PersonaGeoLocalizacionFechaHor" ColumnName="PersonaGeoLocalizacionFechaHor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="PersonasDireccionConnection">
+    <EntitySetMapping Name="PersonaDireccion">
+      <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.PersonaDireccion">
+        <MappingFragment StoreEntitySet="PersonaDireccion">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="PersonaDireccionId" ColumnName="PersonaDireccionId" />
+          <ScalarProperty Name="TipoDireccionId" ColumnName="TipoDireccionId" />
+          <ScalarProperty Name="PersonaDireccionTitulo" ColumnName="PersonaDireccionTitulo" />
+          <ScalarProperty Name="PersonaDireccionGeo" ColumnName="PersonaDireccionGeo" />
+          <ScalarProperty Name="PersonaDireccionDescripcion" ColumnName="PersonaDireccionDescripcion" />
+          <ScalarProperty Name="CiudadDireccionId" ColumnName="CiudadDireccionId" />
+          <ScalarProperty Name="PersonaDireccionFHMod" ColumnName="PersonaDireccionFHMod" />
+          <ScalarProperty Name="PersonaDireccionUsuarioMod" ColumnName="PersonaDireccionUsuarioMod" />
+          <ScalarProperty Name="EstadoDireccionId" ColumnName="EstadoDireccionId" />
+          <ScalarProperty Name="PersonaDireccionDireccion" ColumnName="PersonaDireccionDireccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

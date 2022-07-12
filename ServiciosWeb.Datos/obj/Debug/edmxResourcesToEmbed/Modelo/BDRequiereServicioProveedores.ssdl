@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RequiereServicioProveedores">
+    <Key>
+      <PropertyRef Name="RequiereServicioId" />
+      <PropertyRef Name="RequiereServicioProveedoresId" />
+    </Key>
+    <Property Name="RequiereServicioId" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="RequiereServicioProveedoresId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="RequiereServicioProveedoresAdj" Type="bit" Nullable="false" />
+    <Property Name="RequiereServicioProvCotizacion" Type="money" Nullable="false" />
+    <Property Name="RequiereServicioProvFHTrabajo" Type="datetime" Nullable="false" />
+    <Property Name="RequiereServicioProvDescipcion" Type="varchar" MaxLength="1000" />
+    <Property Name="ServicioPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="RequiereServicioProvFHResp" Type="datetime" Nullable="false" />
+    <Property Name="StatusRequiereId" Type="decimal" Precision="12" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="SERVICEWEB_DESARROLLOModel4StoreContainer">
+    <EntitySet Name="RequiereServicioProveedores" EntityType="Self.RequiereServicioProveedores" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

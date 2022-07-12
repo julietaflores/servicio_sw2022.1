@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="PostConnection">
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="TipoPostId" ColumnName="TipoPostId" />
+          <ScalarProperty Name="PostDescripcion" ColumnName="PostDescripcion" />
+          <ScalarProperty Name="PostEnlace" ColumnName="PostEnlace" />
+          <ScalarProperty Name="PostContenidoLast" ColumnName="PostContenidoLast" />
+          <ScalarProperty Name="PostCompartidoLast" ColumnName="PostCompartidoLast" />
+          <ScalarProperty Name="PostFechaInsercion" ColumnName="PostFechaInsercion" />
+          <ScalarProperty Name="PostUsuario" ColumnName="PostUsuario" />
+          <ScalarProperty Name="PostUID" ColumnName="PostUID" />
+          <ScalarProperty Name="PostLikesLast" ColumnName="PostLikesLast" />
+          <ScalarProperty Name="ServAsigId" ColumnName="ServAsigId" />
+          <ScalarProperty Name="PersonaPostId" ColumnName="PersonaPostId" />
+          <ScalarProperty Name="PostComentario" ColumnName="PostComentario" />
+          <ScalarProperty Name="PostCalificacion" ColumnName="PostCalificacion" />
+          <ScalarProperty Name="PostAutorizaPublicacionImagen" ColumnName="PostAutorizaPublicacionImagen" />
+          <ScalarProperty Name="PostComentarioAprobacion" ColumnName="PostComentarioAprobacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

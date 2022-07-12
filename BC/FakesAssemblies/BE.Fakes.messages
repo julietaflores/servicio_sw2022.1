@@ -1,0 +1,39 @@
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relBilletera: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relBilleteraDetalle: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relCategoriaServicio: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relciudad: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.TipoEstado: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relEmpresa_Usuario: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relEmpresa_Usuario_Corporativo: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relNotificacionPersona: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relpais: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relPersona: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relRegion: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relReqServProv: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relRequiereServicio: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relServAsig: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relservAsigCosto: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relServicioDetalle: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relServicioPersona: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relServicio: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar stub para BE.relSiniestro: el tipo es un tipo de valor.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relBilletera: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relBilleteraDetalle: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relCategoriaServicio: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relciudad: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.TipoEstado: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relEmpresa_Usuario: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relEmpresa_Usuario_Corporativo: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relNotificacionPersona: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relpais: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relPersona: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.Post+relPost: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relRegion: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relReqServProv: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relRequiereServicio: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relServAsig: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relservAsigCosto: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relServicioDetalle: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relServicioPersona: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relServicio: el tipo es una enumeración.
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BC\Fakes\BE.fakes : warning : No se puede generar shim para BE.relSiniestro: el tipo es una enumeración.

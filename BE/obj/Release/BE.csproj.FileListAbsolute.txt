@@ -1,0 +1,11 @@
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BE\bin\Release\BE.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BE\bin\Release\BE.pdb
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BE\obj\Release\BE.csproj.CoreCompileInputs.cache
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BE\obj\Release\BE.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\BE\obj\Release\BE.pdb
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\bin\Release\BE.dll
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\bin\Release\BE.pdb
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\obj\Release\BE.csproj.AssemblyReference.cache
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\obj\Release\BE.csproj.CoreCompileInputs.cache
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\obj\Release\BE.dll
+C:\Users\mario\Desktop\Pagos_Lista_sw\BE\obj\Release\BE.pdb

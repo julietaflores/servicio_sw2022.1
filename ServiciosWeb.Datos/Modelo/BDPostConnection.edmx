@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostId" />
+          </Key>
+          <Property Name="PostId" Type="decimal" Precision="12" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoPostId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostDescripcion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="PostEnlace" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="PostContenidoLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostCompartidoLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostFechaInsercion" Type="datetime" Nullable="false" />
+          <Property Name="PostUsuario" Type="varchar" MaxLength="40" />
+          <Property Name="PostUID" Type="varchar" MaxLength="800" Nullable="false" />
+          <Property Name="PostLikesLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="ServAsigId" Type="varchar" MaxLength="200" />
+          <Property Name="PersonaPostId" Type="decimal" Precision="12" Scale="0" />
+          <Property Name="PostComentario" Type="nvarchar" MaxLength="200" />
+          <Property Name="PostCalificacion" Type="money" />
+          <Property Name="PostAutorizaPublicacionImagen" Type="bit" />
+          <Property Name="PostComentarioAprobacion" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+          <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostId" />
+          </Key>
+          <Property Name="PostId" Type="Decimal" Precision="12" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoPostId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostDescripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PostEnlace" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PostContenidoLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostCompartidoLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="PostFechaInsercion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PostUsuario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="PostUID" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PostLikesLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="ServAsigId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PersonaPostId" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="PostComentario" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PostCalificacion" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PostAutorizaPublicacionImagen" Type="Boolean" />
+          <Property Name="PostComentarioAprobacion" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="PostConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Post" EntityType="Self.Post" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="PostConnection">
+          <EntitySetMapping Name="Post">
+            <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="TipoPostId" ColumnName="TipoPostId" />
+                <ScalarProperty Name="PostDescripcion" ColumnName="PostDescripcion" />
+                <ScalarProperty Name="PostEnlace" ColumnName="PostEnlace" />
+                <ScalarProperty Name="PostContenidoLast" ColumnName="PostContenidoLast" />
+                <ScalarProperty Name="PostCompartidoLast" ColumnName="PostCompartidoLast" />
+                <ScalarProperty Name="PostFechaInsercion" ColumnName="PostFechaInsercion" />
+                <ScalarProperty Name="PostUsuario" ColumnName="PostUsuario" />
+                <ScalarProperty Name="PostUID" ColumnName="PostUID" />
+                <ScalarProperty Name="PostLikesLast" ColumnName="PostLikesLast" />
+                <ScalarProperty Name="ServAsigId" ColumnName="ServAsigId" />
+                <ScalarProperty Name="PersonaPostId" ColumnName="PersonaPostId" />
+                <ScalarProperty Name="PostComentario" ColumnName="PostComentario" />
+                <ScalarProperty Name="PostCalificacion" ColumnName="PostCalificacion" />
+                <ScalarProperty Name="PostAutorizaPublicacionImagen" ColumnName="PostAutorizaPublicacionImagen" />
+                <ScalarProperty Name="PostComentarioAprobacion" ColumnName="PostComentarioAprobacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

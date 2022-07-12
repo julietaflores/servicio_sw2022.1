@@ -1,0 +1,28 @@
+﻿@Model List<Prueba>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Libros</h2>
+<table>
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>nombre</td>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Prueba in Model)
+        {
+        <tr>
+            <td>@Prueba.id</td>
+            <td>@Prueba.nombre</td>
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+

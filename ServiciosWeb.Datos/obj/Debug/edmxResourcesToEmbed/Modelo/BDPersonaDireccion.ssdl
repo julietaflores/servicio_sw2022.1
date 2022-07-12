@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PersonaDireccion">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+      <PropertyRef Name="PersonaDireccionId" />
+    </Key>
+    <Property Name="PersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="TipoDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionTitulo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PersonaDireccionGeo" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="PersonaDireccionDescripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CiudadDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionFHMod" Type="datetime" Nullable="false" />
+    <Property Name="PersonaDireccionUsuarioMod" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="EstadoDireccionId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionDireccion" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+    <EntitySet Name="PersonaDireccion" EntityType="Self.PersonaDireccion" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

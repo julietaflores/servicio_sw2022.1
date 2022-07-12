@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="PersonaId" />
+    </Key>
+    <Property Name="PersonaId" Type="decimal" Precision="12" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonaTokenId" Type="varchar" MaxLength="2000" Nullable="false" />
+    <Property Name="PersonaNombres" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PersonaApellidos" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PersonaCorreo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PersonaFechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="PersonaTelefono" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="PersonaUID" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="PersonaURLFoto" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="PersonaUsuario" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="PersonaFechaHoraMod" Type="datetime" Nullable="false" />
+    <Property Name="TipoPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="GeneroId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="TipoLoginId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="CiudadId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaFechaRegistro" Type="datetime" Nullable="false" />
+    <Property Name="EstadoPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDireccionLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaDNI" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PersonaGeoReal" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="PersonaClave" Type="varchar" MaxLength="40" />
+    <Property Name="PersonaUsuarioMod" Type="varchar" MaxLength="40" />
+    <Property Name="PersonaCodigoTelefono" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="PersonaGeoLocalizacionLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+    <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

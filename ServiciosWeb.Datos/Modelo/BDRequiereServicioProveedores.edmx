@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="RequiereServicioProveedores">
+          <Key>
+            <PropertyRef Name="RequiereServicioId" />
+            <PropertyRef Name="RequiereServicioProveedoresId" />
+          </Key>
+          <Property Name="RequiereServicioId" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="RequiereServicioProveedoresId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="RequiereServicioProveedoresAdj" Type="bit" Nullable="false" />
+          <Property Name="RequiereServicioProvCotizacion" Type="money" Nullable="false" />
+          <Property Name="RequiereServicioProvFHTrabajo" Type="datetime" Nullable="false" />
+          <Property Name="RequiereServicioProvDescipcion" Type="varchar" MaxLength="1000" />
+          <Property Name="ServicioPersonaId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="RequiereServicioProvFHResp" Type="datetime" Nullable="false" />
+          <Property Name="StatusRequiereId" Type="decimal" Precision="12" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="SERVICEWEB_DESARROLLOModel4StoreContainer">
+          <EntitySet Name="RequiereServicioProveedores" EntityType="Self.RequiereServicioProveedores" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SERVICEWEB_DESARROLLOModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="RequiereServicioProveedores">
+          <Key>
+            <PropertyRef Name="RequiereServicioId" />
+            <PropertyRef Name="RequiereServicioProveedoresId" />
+          </Key>
+          <Property Name="RequiereServicioId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RequiereServicioProveedoresId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="RequiereServicioProveedoresAdj" Type="Boolean" Nullable="false" />
+          <Property Name="RequiereServicioProvCotizacion" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="RequiereServicioProvFHTrabajo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RequiereServicioProvDescipcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ServicioPersonaId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="RequiereServicioProvFHResp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StatusRequiereId" Type="Decimal" Precision="12" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="RequiereSercicioProveedoresConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RequiereServicioProveedores" EntityType="Self.RequiereServicioProveedores" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModel4StoreContainer" CdmEntityContainer="RequiereSercicioProveedoresConnection">
+          <EntitySetMapping Name="RequiereServicioProveedores">
+            <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel4.RequiereServicioProveedores">
+              <MappingFragment StoreEntitySet="RequiereServicioProveedores">
+                <ScalarProperty Name="RequiereServicioId" ColumnName="RequiereServicioId" />
+                <ScalarProperty Name="RequiereServicioProveedoresId" ColumnName="RequiereServicioProveedoresId" />
+                <ScalarProperty Name="RequiereServicioProveedoresAdj" ColumnName="RequiereServicioProveedoresAdj" />
+                <ScalarProperty Name="RequiereServicioProvCotizacion" ColumnName="RequiereServicioProvCotizacion" />
+                <ScalarProperty Name="RequiereServicioProvFHTrabajo" ColumnName="RequiereServicioProvFHTrabajo" />
+                <ScalarProperty Name="RequiereServicioProvDescipcion" ColumnName="RequiereServicioProvDescipcion" />
+                <ScalarProperty Name="ServicioPersonaId" ColumnName="ServicioPersonaId" />
+                <ScalarProperty Name="RequiereServicioProvFHResp" ColumnName="RequiereServicioProvFHResp" />
+                <ScalarProperty Name="StatusRequiereId" ColumnName="StatusRequiereId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

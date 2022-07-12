@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="decimal" Precision="12" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoPostId" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostDescripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PostEnlace" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="PostContenidoLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostCompartidoLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostFechaInsercion" Type="datetime" Nullable="false" />
+    <Property Name="PostUsuario" Type="varchar" MaxLength="40" />
+    <Property Name="PostUID" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="PostLikesLast" Type="decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="ServAsigId" Type="varchar" MaxLength="200" />
+    <Property Name="PersonaPostId" Type="decimal" Precision="12" Scale="0" />
+    <Property Name="PostComentario" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostCalificacion" Type="money" />
+    <Property Name="PostAutorizaPublicacionImagen" Type="bit" />
+    <Property Name="PostComentarioAprobacion" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="SERVICEWEB_DESARROLLOModelStoreContainer">
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

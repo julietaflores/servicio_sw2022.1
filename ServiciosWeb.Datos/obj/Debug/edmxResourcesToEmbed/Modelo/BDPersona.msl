@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SERVICEWEB_DESARROLLOModelStoreContainer" CdmEntityContainer="Connection_ServiceWeb_DESARROLLO">
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="SERVICEWEB_DESARROLLOModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+          <ScalarProperty Name="PersonaTokenId" ColumnName="PersonaTokenId" />
+          <ScalarProperty Name="PersonaNombres" ColumnName="PersonaNombres" />
+          <ScalarProperty Name="PersonaApellidos" ColumnName="PersonaApellidos" />
+          <ScalarProperty Name="PersonaCorreo" ColumnName="PersonaCorreo" />
+          <ScalarProperty Name="PersonaFechaNacimiento" ColumnName="PersonaFechaNacimiento" />
+          <ScalarProperty Name="PersonaTelefono" ColumnName="PersonaTelefono" />
+          <ScalarProperty Name="PersonaUID" ColumnName="PersonaUID" />
+          <ScalarProperty Name="PersonaURLFoto" ColumnName="PersonaURLFoto" />
+          <ScalarProperty Name="PersonaUsuario" ColumnName="PersonaUsuario" />
+          <ScalarProperty Name="PersonaFechaHoraMod" ColumnName="PersonaFechaHoraMod" />
+          <ScalarProperty Name="TipoPersonaId" ColumnName="TipoPersonaId" />
+          <ScalarProperty Name="GeneroId" ColumnName="GeneroId" />
+          <ScalarProperty Name="TipoLoginId" ColumnName="TipoLoginId" />
+          <ScalarProperty Name="CiudadId" ColumnName="CiudadId" />
+          <ScalarProperty Name="PersonaFechaRegistro" ColumnName="PersonaFechaRegistro" />
+          <ScalarProperty Name="EstadoPersonaId" ColumnName="EstadoPersonaId" />
+          <ScalarProperty Name="PersonaDireccionLast" ColumnName="PersonaDireccionLast" />
+          <ScalarProperty Name="PersonaDNI" ColumnName="PersonaDNI" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="PersonaGeoReal" ColumnName="PersonaGeoReal" />
+          <ScalarProperty Name="PersonaClave" ColumnName="PersonaClave" />
+          <ScalarProperty Name="PersonaUsuarioMod" ColumnName="PersonaUsuarioMod" />
+          <ScalarProperty Name="PersonaCodigoTelefono" ColumnName="PersonaCodigoTelefono" />
+          <ScalarProperty Name="PersonaGeoLocalizacionLast" ColumnName="PersonaGeoLocalizacionLast" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

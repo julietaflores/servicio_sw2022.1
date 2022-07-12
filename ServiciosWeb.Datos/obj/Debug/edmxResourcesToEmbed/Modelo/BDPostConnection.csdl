@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SERVICEWEB_DESARROLLOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="Decimal" Precision="12" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoPostId" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostDescripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostEnlace" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostContenidoLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostCompartidoLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="PostFechaInsercion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PostUsuario" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="PostUID" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PostLikesLast" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+    <Property Name="ServAsigId" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PersonaPostId" Type="Decimal" Precision="12" Scale="0" />
+    <Property Name="PostComentario" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PostCalificacion" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PostAutorizaPublicacionImagen" Type="Boolean" />
+    <Property Name="PostComentarioAprobacion" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="PostConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Post" EntityType="Self.Post" />
+  </EntityContainer>
+</Schema>

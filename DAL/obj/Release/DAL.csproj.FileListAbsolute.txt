@@ -1,0 +1,11 @@
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\DAL\bin\Release\DAL.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\DAL\bin\Release\DAL.pdb
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\DAL\obj\Release\DAL.dll
+C:\Users\Julieta\Documents\appwebservice\ServiciosWebServidor\DAL\obj\Release\DAL.pdb
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\bin\Release\DAL.dll
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\bin\Release\DAL.pdb
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\obj\Release\DAL.dll
+C:\Users\mario\Desktop\Pagos_Lista_sw\DAL\obj\Release\DAL.pdb
