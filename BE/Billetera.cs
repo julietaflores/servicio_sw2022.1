@@ -8,6 +8,7 @@ namespace BE
 {
     public class Billetera:BEEntidad
     {
+
         public decimal BilleteraId { get; set; }
         public decimal MonedaId { get; set; }
         public string BilleteraNroCuenta { get; set; }
